@@ -1,0 +1,142 @@
+start:
+  lpc create_graphics
+
+mario_head_left:
+  byte 0x00
+  byte 0x00
+  byte 0x01
+  byte 0x03
+  byte 0x03
+  byte 0x05
+  byte 0x05
+  byte 0x06
+
+mario_head_right:
+  byte 0x00
+  byte 0x00
+  byte 0x18
+  byte 0x1f
+  byte 0x08
+  byte 0x08
+  byte 0x04
+  byte 0x0f
+
+mario_body_left_1:
+  byte 0x0f
+  byte 0x1f
+  byte 0x1e
+  byte 0x18
+  byte 0x01
+  byte 0x07
+  byte 0x07
+  byte 0x04
+
+mario_body_right_1:
+  byte 0x18
+  byte 0x10
+  byte 0x08
+  byte 0x18
+  byte 0x08
+  byte 0x08
+  byte 0x10
+  byte 0x18
+
+mario_body_left_2:
+  byte 0x0f
+  byte 0x1f
+  byte 0x0e
+  byte 0x08
+  byte 0x01
+  byte 0x08
+  byte 0x1f
+  byte 0x0c
+
+mario_body_right_2:
+  byte 0x1c
+  byte 0x18
+  byte 0x08
+  byte 0x0d
+  byte 0x07
+  byte 0x1f
+  byte 0x03
+  byte 0x00
+
+create_graphics:
+  ldi mario_head_left
+  tab
+  ldi 0x00
+  udg
+  ldi mario_head_right
+  tab
+  ldi 0x01
+  udg
+  ldi mario_body_left_1
+  tab
+  ldi 0x02
+  udg
+  ldi mario_body_right_1
+  tab
+  ldi 0x03
+  udg
+  ldi mario_body_left_2
+  tab
+  ldi 0x04
+  udg
+  ldi mario_body_right_2
+  tab
+  ldi 0x05
+  udg
+
+mario_walk:
+  ldi 0x00
+  RCH
+  cmp 0x52
+  jmp exit
+  cmp 0x4d
+  jmp exit
+  cmp 0x4b
+  jmp exit
+  cmp 0x6c
+  jmp exit
+  ldi 0x00
+  tab
+  lda count
+  cmp 0x11
+  jmp reset_mario
+  inm count
+  ldi 0x00
+  tab
+  ldi 0x00
+  pos
+  spr 0x00
+  spr 0x01
+  ldi 0x01
+  tab
+  ldi 0x00
+  pos
+  spr 0x02
+  spr 0x03
+  dly 0xff
+  dly 0xff
+  ldi 0x01
+  tab
+  ldi 0x00
+  pos
+  spr 0x04
+  spr 0x05
+  dly 0xff
+  dly 0xff
+  sdr
+  lpc mario_walk
+
+count:
+  byte 0x00
+
+reset_mario:
+  ldi 0x00
+  sta count
+  cls
+  lpc mario_walk
+exit:
+  cls
+  byte 0x00
