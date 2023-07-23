@@ -36,17 +36,12 @@ Manzil - 0x0002, qiymat - 0f // A registerdan ekranga chiqarish
 Manzil - 0x0003, qiymat - 00 // Program counterni tiklash (sikldan chiqish)
 ```
 
-Ishga tushirish: `0xffff`
-
-Qayta ishga tushirish: `0xfffb`
-
-Ekranni tozalash: `0xfffa`
-
-Xotira manzilidan o'qish: `0xfffc`
-
-UART orqali ma'lumotlarni o'qish: `0xfffd`
-
-Ma'lumotlarni UART orqali saqlash: `0xfffe`
+- Ishga tushirish: `0xffff`
+- Qayta ishga tushirish: `0xfffb`
+- Ekranni tozalash: `0xfffa`
+- Xotira manzilidan o'qish: `0xfffc`
+- UART orqali ma'lumotlarni o'qish: `0xfffd`
+- Ma'lumotlarni UART orqali saqlash: `0xfffe`
 
 _Barcha instruksiyalar bilan [instruction_set](assets/instruction_set.pdf) fayli orqali tanishingiz mumkin. Shuningdek [samples](samples/)_ papkasida bir necha misollar ham ko'rsatilgan.
 
