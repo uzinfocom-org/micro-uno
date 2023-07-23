@@ -2,9 +2,9 @@
 
 Birinchi mikrokompyuterlar yoki umuman miktoprotsessorlarning qanday ishlashini o'rganmoqchi bo'lsangiz unda ushbu konstruksiya siz uchun ayni muddao. Konstruksiya uchun barcha kerakli ehtiyot qismlarni O'zbekiston sharoitida muammosiz topishingiz mumkin. Shuningdek 3D printerda chop etish uchun modellar ham biriktirilgan.
 
-Youtube video: ![https://www.youtube.com/watch?v=Z8Tm94-23g4](https://www.youtube.com/watch?v=Z8Tm94-23g4)
+Youtube video: [https://www.youtube.com/watch?v=Z8Tm94-23g4](https://www.youtube.com/watch?v=Z8Tm94-23g4)
 
-![Image](microuno.jpg)
+![Image](assets/microuno.jpg)
 
 ## Talablar
 
@@ -15,7 +15,7 @@ Youtube video: ![https://www.youtube.com/watch?v=Z8Tm94-23g4](https://www.youtub
 
 ## Matritsali klaviatura
 
-![Keyborad](keyboard.png)
+![Keyborad](assets/keyboard.png)
 
 ## Ishga tushirish va foydalanish
 
@@ -43,7 +43,7 @@ Xotira manzilidan o'qish: `0xfffc`
 UART orqali ma'lumotlarni o'qish: `0xfffd`
 Ma'lumotlarni UART orqali saqlash: `0xfffe`
 
-_Barcha instruksiyalar bilan [instruction_set](assets/instruction_set) fayli orqali tanishingiz mumkin. Shuningdek [samples](samples/)_ papkasida bir necha misollar ham ko'rsatilgan.
+_Barcha instruksiyalar bilan [instruction_set](assets/instruction_set.pdf) fayli orqali tanishingiz mumkin. Shuningdek [samples](samples/)_ papkasida bir necha misollar ham ko'rsatilgan.
 
 ## Dasturlarni UART orqali yuklash
 
